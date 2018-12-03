@@ -1,14 +1,30 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
 
+
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+      <ion-list *ngFor="let i of itens">
+        <ion-list-header>
+          {{i.dataEvento}}
+        </ion-list-header>
+            <button ion-item  (click)="itemSelected(i)">
+              <ion-card>
+                <img src={{i.foto}}/>
+                  <ion-card-content>
+                    <ion-card-title>
+                      {{i.nomeEvento}}
+                    </ion-card-title>
+                    <p>
+                      {{ i.horaEvento }}
+                    </p>
+                  </ion-card-content>
+                </ion-card>
+          </button>  
+      </ion-list>
 </ion-content>
