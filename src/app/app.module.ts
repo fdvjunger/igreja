@@ -13,8 +13,7 @@ import { DetalhePage } from '../pages/detalhe/detalhe';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    DetalhePage
+    HomePage
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,7 @@ import { DetalhePage } from '../detalhe/detalhe';
 export class HomePage {
 
   private url:string = 'http://191.252.200.224:8080/ibcweb/rest/webservice/getProximosEventos';
+  private url2:string = 'http://191.252.200.224:8080/ibcweb/rest/webservice/getProximosEventosAgrupado';
   public itens: Array<{}>;
 
   constructor(
